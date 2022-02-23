@@ -17,10 +17,10 @@ build: $(CPPOBJS)
 	$(CPP) -o $(BUILDDIR)/${TARGET} $^
 
 $(CPPOBJS): $(BUILDDIR)/%.o : %.cpp
-	$(CPP) -o $@ -c $<
+	$(CPP) -c $@ -o $<
 
 clean:
 	$(shell rm -rf ${BUILDDIR})
 	$(shell del ${BUILDDIR})
 
-.PHONEY: clean createdirs build
+.PHONY: clean createdirs build
