@@ -17,7 +17,7 @@ build: $(CPPOBJS)
 	$(CPP) -o $(BUILDDIR)/${TARGET} $^
 
 $(CPPOBJS): $(BUILDDIR)/%.o : %.cpp
-	$(CPP) -c $@ -o $<
+	$(CPP) -c $< -o $@
 
 clean:
 	$(shell rm -rf ${BUILDDIR})
