@@ -1,0 +1,27 @@
+CPP = g++
+
+SRCS = refReturnTwo.cpp
+
+TARGET = refReturnTwo
+
+BUILDDIR = buildDir
+
+CPPOBJS = $(addprefix $(BUILDDIR)/, $(SRCS:.cpp=.o))
+
+all: clean createdirs build
+
+createdirs:
+	$(shell mkdir ${BUILDDIR})
+
+clean:
+	$(shell rm -rf ${BUILDDIR})
+	$(shell del ${BUILDDIR})
+
+build: $(CPPOBJS)
+	$(CPP) -o $(BUILDDIR)/$(TARGET) $^
+
+$(CPPOBJS): $(BUILDDIR)/%.o : %.cpp
+	$(CPP) -c $< -o $@
+
+.SUFFIXES: .cpp .o
+.PHONY: clean createdirs build
