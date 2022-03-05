@@ -1,3 +1,7 @@
 #
 # build result folder
 buildDir/
+# cLione Folder
+.idea/
+# visual code folder
+.vscode/
