@@ -11,7 +11,7 @@ void NameCard::ShowNameCardInfo() const{
     cout<<endl;
 }
 
-void COMP_POS::ShowPositionInfo(int pos){{
+void COMP_POS::ShowPositionInfo(int pos){
         switch (pos){
         case CLERK:
             std::cout<<"CLERK"<<std::endl;
@@ -23,9 +23,7 @@ void COMP_POS::ShowPositionInfo(int pos){{
             std::cout<<"ASSIST"<<std::endl;
             break;
         case MANAGER:
-            std::cout<<"MANAGER"<<std::endl;
             break;
+            std::cout<<"MANAGER"<<std::endl;
         }
-    }
-
 }

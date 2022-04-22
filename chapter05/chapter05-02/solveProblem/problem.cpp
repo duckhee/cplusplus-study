@@ -11,7 +11,22 @@ namespace COMP_POS{
         ASSIST,
         MANAGER
     };
-    void ShowPositionInfo(int pos);
+    void ShowPositionInfo(int pos){
+        switch (pos){
+        case CLERK:
+            std::cout<<"CLERK"<<std::endl;
+            break;
+        case SENIOR:
+            std::cout<<"SENIOR"<<std::endl;
+            break;
+        case ASSIST:
+            std::cout<<"ASSIST"<<std::endl;
+            break;
+        case MANAGER:
+            break;
+            std::cout<<"MANAGER"<<std::endl;
+        }
+    }
 }
 
 
@@ -43,7 +58,8 @@ class NameCard{
             cout<<"name : "<<name<<endl;
             cout<<"company : "<<company<<endl;
             cout<<"phone : "<<phone<<endl;
-            cout<<"age : "<<position<<endl;
+            cout<<"position : ";
+            COMP_POS::ShowPositionInfo(position);
         }
         ~NameCard(){
             delete []name;
